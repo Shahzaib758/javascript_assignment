@@ -1,0 +1,31 @@
+* {
+    padding: 0%;
+    margin: 0;
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 3.3em;
+    font-weight: lighter;
+    background-color: royalblue;
+    color: #ffffff;
+    text-align: center;
+}
+table{
+    border-collapse: collapse;
+    width: 90%;
+    margin: 10px auto;
+}
+table , td ,th {
+    border: 1px solid black;
+}
+td ,th {
+    height: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+tr:nth-child(even){
+    background-color: gainsboro;
+}
+tr:nth-child(odd){
+    background-color: rgb(194, 175, 175);
+}
