@@ -77,16 +77,37 @@
 
 // Question Number 2
 
+// let numberOfVisit = 4;
+// alert("You have visit this site " + ++numberOfVisit + " times");
+
 // Question Number 3
 // let birthYear = 1999;
-// document.write("My birth year is " + birthYear + "<br>" +"Data type of my declared variable is number")
-// document.getElementById("demo").innerHTML = "My birth year is " + birthYear + "<br>" +"Data type of my declared variable is number"
+// document.write("My birth year is " + birthYear +"<br/>" + "The data type of my variable is " + typeof birthYear);
+
 
 // Question Number 4
 // let visitorName = "Shahzaib Siddqui";
 // let productTitle = "T-shirt";
 // let quantity = 5;
 // document.write(visitorName , " ordered " , quantity + " " + productTitle ,"(s) " , "XYZ Clothing store" ,"<br/>");
+
+
+/* Chapter 4 */
+
+// Question Number 1
+// let name,age,salary;
+
+// Question Number 2
+// 5 legal or 5 illegal variable names
+// let name, _name, $name, name1, Name;
+// let 3name, first-name, first name, new, name?;
+
+// Question Number 3
+// document.getElementById("demo").innerHTML = "Rules for naming JS variables";
+// document.write("Variable names can only contain numbers," + " $ " + "and " + "_." + "for example" + ": $my_1stVariable");
+// document.write("<br/>" + "Variables muust begin with a " + "letter " + " , " + "$" + " and " + "_" + "For example : $name , _name or name" +"<br/>");
+// document.write("Variable names are case " + "sensitive" + "<br/>");
+// document.write("Variable names should not be JS " + "Keyword");
 
 
 /* Chapter 5 */
@@ -165,12 +186,10 @@
 
 
 // Question Number 8
-// let total_marks = 1100;
-// let obtain_marks = parseFloat(prompt("Enter marks obtained by Student"));
-// document.getElementById("demo").innerHTML = "Mark Sheet";
-// document.write("Total marks : ", total_marks, "<br/>")
-// document.write("Obtained marks : ", obtain_marks, "<br/>")
-// document.write("Percentag : ", (obtain_marks / total_marks) * 100, "%")
+// let totalMarks = 980;
+// let obtainMarks = 804;
+// let percentage = (obtainMarks/totalMarks)*100;
+// document.write("Total marks: " + totalMarks + "<br>"+"Obtained marks: " + obtainMarks + "<br>" +"Percentage: " +percentage+"%");
 
 
 // Question Number 9
@@ -179,29 +198,33 @@
 // document.write("Total currency in PKR: " , total);
 
 
-// Question Number 9
+// Question Number 10
 // let a = 3;
 // let b = a + 5 * 10 / 2;
 // console.log("The answer is", b); 
 
 
-// Question Number 10
-// let current_year = 2021;
-// let birth_year = 1999;
-// let age = current_year - birth_year;
-// document.write("Current Year : ", current_year, "<br/>")
-// document.write("Birth Year : ", birth_year, "<br/>")
-// document.write("Your age : ", age, "<br/>")
+// Question Number 11
+// let currentYear = 2021;
+// let birthYear = parseInt(prompt("Enter your birth year"));
+// document.write("They are either " + (currentYear - birthYear) + " or " + ((currentYear - birthYear) - 1) + " years old");
 
 
-// Question Number 10
-// let radOfCircle = parseFloat(prompt("Enter the radius of the circle"));
-// let circumferenceOfCircle = 2 * 3.142 * radOfCircle;
-// let areaOfCircle = 3.142 * (radOfCircle * radOfCircle);
-// document.write("Radius of cirle: ", radOfCircle , "<br/>");
+// Question Number 12
+// let radius = 20;
+// let circumferenceOfCircle = 2 * 3.142 * radius;
+// let areaOfCircle = 3.142 * (radius * radius);
+// document.write("Radius of cirle: ", radius , "<br/>");
 // document.write("Circumfrence of cirle: ", circumferenceOfCircle , "<br/>");
 // document.write("Area of circle: ", areaOfCircle , "<br/>");
 
+// Question Number 12
+// let favouriteSnacks = "Choclate chip";
+// let currentAge = 21;
+// let estimatedMaxAge = 65;
+// let amountOfSnacksPerDay = 3;
+// let totalSnacks = ((estimatedMaxAge - currentAge) * 365 * 3);
+// document.write("You will need " + totalSnacks + " to last you until the ripe old age of " + estimatedMaxAge);
 
 /* Chapter 6 to 9 */
 
@@ -232,7 +255,6 @@
 // document.write("The value of a is ", a , "<br/>");
 // lineBreak();
 
-
 // Question Number 2
 // function lineBreak(){
 //     document.write("<br/>");
@@ -246,24 +268,28 @@
 // document.write("Result :", result ,"<br/>");
 // lineBreak();
 
+// a = 2, b = 1;
 // result = --a;
 // document.write("The value of a :", a ,"<br/>");
 // document.write("The value of b :", b ,"<br/>");
 // document.write("Result :", result ,"<br/>");
 // lineBreak();
 
+// a = 2, b = 1;
 // result = --a - --b;
 // document.write("The value of a :", a ,"<br/>");
 // document.write("The value of b :", b ,"<br/>");
 // document.write("Result:", result ,"<br/>");
 // lineBreak();
 
+// a = 2, b = 1;
 // result = --a - --b + ++b;
 // document.write("The value of a :", a ,"<br/>");
 // document.write("The value of b :", b ,"<br/>");
 // document.write("Result :", result ,"<br/>");
 // lineBreak();
 
+// a = 2, b = 1;
 // result = --a - --b + ++b + b--;
 // document.write("The value of a :", a ,"<br/>");
 // document.write("The value of b :", b ,"<br/>");
@@ -273,7 +299,7 @@
 
 // Question Number 3
 // let userName = prompt("Enter your name");
-// alert("Hello " + userName + " Jani");
+// alert("Hello " + userName);
 
 
 // Question Number 4
@@ -326,21 +352,21 @@
 
 // Question Number 1
 // let city = prompt("Enter city");
-// if (city === "Karachi" || city === "karachi" || city === "KARACHI") {
-//     alert("Welcome to the city of light");
+// if (city.toLowerCase() === "karachi"){
+//     document.write("Welcome to city of light");
 // }
-// else {
-//     alert("Welcome to " + city);
+// else{
+//     document.write("Welcome to " + city);
 // }
 
 
 // Question Number 2
-// let gender = prompt("Enter gender");
-// if (gender === "MALE" || gender === "Male" || gender === "male") {
-//     alert("Good Morning Sir");
+// let gender = prompt("Enter your gender");
+// if (gender.toLowerCase() === "male"){
+//     document.write("Good morning Sir!");
 // }
-// else if (gender === "FEMALE" || gender === "Female" || gender === "female") {
-//     alert("Good Morning Ma’am.");
+// else if(gender.toLowerCase() === "female"){
+//     document.write("Good morning Madam!");
 // }
 // else {
 //     alert("Good Morning");
@@ -374,6 +400,54 @@
 
 
 // Question Number 5
+// var a = 4;
+// if (++a === 5) {
+//     alert("given condition for variable a is true");
+// }
+
+
+// var b = 82;
+// if (b++ === 83) {
+//     alert("given condition for variable b is true");
+// }
+
+
+// var c = 12;
+// if (c++ === 13) {
+//     alert("condition 1 is true");
+// }
+// if (c === 13) {
+//     alert("condition 2 is true");
+// }
+// if (++c < 14) {
+//     alert("condition 3 is true");
+// }
+// if (c === 14) {
+//     alert("condition 4 is true");
+// }
+
+
+// var materialCost = 20000;
+// var laborCost = 2000;
+// var totalCost = materialCost + laborCost;
+// if (totalCost === laborCost + materialCost) {
+//     alert("The cost equals");
+// }
+
+
+// if(true){
+//     alert("True");
+// }
+// if (false) {
+//     alert("False");
+// }
+
+// if("car" < "cat"){
+//     alert("car is smaller than cat");
+// }
+
+
+// Question Number 6
 // let english = +prompt("Enter the marks of English");
 // let maths = +prompt("Enter the marks of Maths");
 // let physic = +prompt("Enter the marks of Physic");
@@ -492,6 +566,16 @@
 /* Chapter 12 to 13 */
 
 // Question Number 1
+// let character = prompt("Enter Character");
+// if (character >= "A" && character <= "Z"){
+//     document.write("<br/>"+"Enterd character is upper case");
+// }
+// else if (character >= "a" && character <= "z"){
+//     document.write("<br/>"+"Enterd character is lower case");
+// }
+// else if(!(isNaN(character))){
+//     document.write("<br/>"+"Enter character is number")
+// }
 
 
 // Question Number 2
@@ -575,26 +659,28 @@
 /* Chapter 14 to 16 */
 
 // Question Number 1
-// let students1 = [];
-// let students2 = new Array();
+// let array = [];
 
-// let str = ["Ali", "Bilal", "Hassan", "Wasamad"];
-// let num = [1, 24, 56, 7, 35, 34];
-// let bool = [true, false, false, true];
-// let mixArray = [1, "ali", false, 23.3];
+// Question Number 2
+// let newArray = new Array();
 
-// console.log(students1);
-// console.log(students2);
-// console.log(str);
-// console.log(num);
-// console.log(bool);
-// console.log(mixArray);
+// Question Number 3
+// let names = ["Ali", "Bilal", "Hassan", "Wasamad"];
 
+// Question Number 4
+// let numbers = [45, 3453, 5, 356, 34, 6];
 
-// let qualifications = ["SSC", "HSC", "BSC", "BS", "BCOM", "MS", "M.Phil.", "PhD"];
+// Question Number 5
+// let booleans = [true, false, true, false, true, false];
 
-// for (i = 0; i < qualifications.length; i++) {
-//     document.write((i+1)+ ") " +qualifications[i]+"<br>")
+// Question Number 6
+// let mixArray = [true, "Shahzaib", 2.23, 4];
+
+// Question Number 7
+// document.write("<br>"+"Qualification:" +"<br>");
+// let qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"]
+// for (let i = 0; i < qualifications.length; i++) {
+//     document.write(qualifications[i] + "<br>");
 // }
 
 
@@ -635,60 +721,84 @@
 // marks = marks.sort(function(a,b){return a-b});
 // console.log(marks);
 
-// or or or
+// or
 
-// let marks = [320, 230, 480, 120,154,444,142,751,141,11];
-// let copyMarks = marks.slice(0);
-// let newMarks = [];
+// let beforeSort = [320, 230, 480, 120];
 
+// let copyArray = beforeSort.slice();
+// let smallestNumber = null;
+// let indexOfSmallestNumber = null;
 
-// for (let i = 0; i < marks.length;i++) {
+// let afterSort = [];
 
-//     var smallNumber = copyMarks[0];
-
-//     for (let j = 0; j < copyMarks.length; j++) {
-//         if (smallNumber > copyMarks[j] ) {
-//             smallNumber = copyMarks[j];
+// for (let i = 0; i < beforeSort.length; i++) {
+//     smallestNumber = copyArray[0];
+//     for (let j = 0; j < copyArray.length; j++) {
+//         if (smallestNumber > copyArray[j]) {
+//             smallestNumber = copyArray[j];
 //         }
 //     }
-//     let indexOfSmallNumber = copyMarks.indexOf(smallNumber);
-
-//     copyMarks.splice(indexOfSmallNumber, 1);
-//     newMarks.push(smallNumber);
+//     indexOfSmallestNumber = copyArray.indexOf(smallestNumber);
+//     afterSort.push(smallestNumber);
+//     copyArray.splice(indexOfSmallestNumber, 1);
 // }
 
+// console.log(beforeSort);
+// console.log(afterSort);
 
-// console.log(marks);
-// console.log(newMarks);
+// Question Number 11
+
+// let cities = ["Karachi", "Peshawar", "Islamabad", "Lahore", "Quetta", "Hyderabad"];
+// document.write("<br>" + "Cities List: " + cities);
+// let selectedCities = cities.slice(1, 4);
+// document.write("<br>" + "Selected Cities List: " + selectedCities);
 
 
 // Question Number 12
-
 // let array = ["This", "is", "my", "cat"];
 // let str = array.join(" ");
 // console.log(str);
 
 
+// Question Number 13
+// let devices = [];
+
+// for (let i = 0; i < 4; i++) {
+//     devices.push(prompt("Enter devices"));
+// }
+
+// document.write("<br>" + "List of devices: " + devices);
+
+// for (let i = 0; i < 4; i++) {
+//     document.write("<br>" + "Out: " + devices.shift());
+// }
+
+// Question Number 14
+// let devices = [];
+
+// for (let i = 0; i < 4; i++) {
+//     devices.push(prompt("Enter devices"));
+// }
+// document.write("<br>" + "List of devices: " + devices);
+
+// for (let i = 0; i < 4; i++) {
+//     document.write("<br>" + "Out: " + devices.pop());
+// }
+
 // Question Number 15
+// let array = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// for (let i= 0;i <array.length;i++){
+//     document.write("<br>"+ array[i]);
+// }
 
 /*Chapter 17-20*/
 
 // Question Number 1
 
+// let matrix = [[], [], []];
+
+// Question Number 2
 // let matrix = [[], [], []];
 // let number;
 
@@ -702,13 +812,62 @@
 
 // for (i = 0; i < matrix.length; i++) {
 //     for (j = 0; j < matrix[i].length; j++) {
-//         document.write(matrix[i][j] + " ");
+//         document.write(matrix[i][j] + "\t");
 //     }
 //     document.write("<br>")
 // }
 
+// Question Number 3
+// let number = 0;
 
-// console.log(matrix);
+// for (let i = 1; i <= 10; i++) {
+//     document.write("<br>"+ ++number);
+// }
+
+// Question Number 4
+// let number = Number(prompt("Enter number"));
+// let startingPoint = Number(prompt("Enter starting number"));
+// let endingPoint = Number(prompt("Enter ending number"));
+
+
+// for (let i = startingPoint; i <= endingPoint; i++) {
+//     document.write("<br>" + number + "\t*\t" + i + "\t=\t" + (number * i));
+// }
+
+
+// Question Number 5
+// let fruits = ["apple", "banana", "mango", "orange","strawberry"];
+
+// for(let i =0; i <fruits.length;i++){
+//     document.write("<br>" + "Element at index " + i +" is " + fruits[i]);
+// }
+
+
+// Question Number 6
+// document.write("Counting :" + "<br>");
+// for (let i = 1; i <= 15; i++) {
+//     document.write(i+",\t");
+// }
+
+// document.write("<br>"+"Reverse counting :" + "<br>");
+// for (i = 10; i >= 1; i--) {
+//     document.write(i+",\t");
+// }
+
+// document.write("<br>" + "Even number :" + "<br>");
+// for (i = 0; i <= 20; i+=2) {
+//     document.write(i + ",\t");
+// }
+
+// document.write("<br>" + "Even number :" + "<br>");
+// for (i = 1; i <= 19; i+=2) {
+//     document.write(i + ",\t");
+// }
+
+// document.write("<br>" + "Series :" + "<br>");
+// for (i = 2; i <= 20; i+=2) {
+//     document.write(i + "K,\t");
+// }
 
 // Question Number 7
 
@@ -725,21 +884,55 @@
 //     document.write(selectSweet + " avalible at index " + answer + " in our bakery");
 // }
 
+// Or
+// let array = ["cake", "apple pie", "cookie", "chips", "patties"];
+// let selectSweet = prompt("Enter sweets");
+// let notFind = true;
+
+// for(let i =0;i <array.length;i++){
+//     if(selectSweet.toLowerCase() === array[i]){
+//         document.write("The given item is found in the list");
+//         notFind = false;
+//         break;
+//     }
+// }
+// if(notFind){
+//     document.write("The given item is not found in the list")
+// }
+
 // Question Number 8
+// let numbers = [24, 53, 78, 91, 12];
+// let largestNumber = numbers[0];
 
-// let array = [24, 53, 78, 91, 12];
-
-// let largestNumber = array[0];
-
-
-// for (i = 0; i< array.length ; i++) {
-//     if (largestNumber < array[i]) {
-//         largestNumber = array[i];
+// for(let i = 0;i < numbers.length;i++){
+//     if(largestNumber < numbers[i]){
+//         largestNumber = numbers[i];
 //     }
 // }
 
-// document.write("The largest number is " + largestNumber);
+// document.write("<br>"+"Numbers : "+numbers);
+// document.write("<br>"+"Largest Number is: "+ largestNumber);
 
+// Question Number 9
+// let numbers = [24, 91, 12, 53, 78];
+// let smallestNumber = numbers[0];
+
+// for(let i = 0;i < numbers.length;i++){
+//     if(smallestNumber > numbers[i]){
+//         smallestNumber = numbers[i];
+//     }
+// }
+
+// document.write("<br>"+"Numbers : "+numbers);
+// document.write("<br>"+"Smallest Number is: "+ smallestNumber);
+
+// Question Number 10
+
+// let number = 5;
+// while(number <= 100){
+//     document.write(number +"\t");
+//     number = 5+number;
+// }
 
 
 /* Chapter 21 to 25 */
