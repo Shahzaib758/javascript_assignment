@@ -1534,15 +1534,225 @@
 // document.write("<br>" + "Overtime salary of employ is " + overTimePay + " RS");
 
 
+/* Chapter 43 to 48 */
 
-/* Chapter 43 to 48 */  
+// Question Number 1
+// function sayGreeting(){
+//     alert("Hello");
+// }
+
+// Question Number 2
+// function myFunction(){
+//     alert("Thanks for purchesing a phone from us");
+// }
+
+// Question Number 3
+// let tableTag = document.querySelector("table");
+
+// // Creating Element
+// let studentsNames = ["Jhone", "Doe", "Mark", "James"];
+// let studentsClass = [10, 9, 10, 8]
+
+// function showData() {
+//     for (let a = 0; a < studentsNames.length; a++) {
+
+//         let trTag = document.createElement("tr");
+
+//         for (let i = 0; i < 4; i++) {
+
+//             let tdTag = document.createElement("td");
+
+//             if (i === 0) {
+//                 tdTag.textContent = a + 1;
+
+//             }
+
+//             else if (i === 1) {
+//                 tdTag.innerText = studentsNames[a];
+//             }
+//             else if (i === 2) {
+//                 tdTag.innerText = studentsClass[a];
+//             }
+//             else if (i === 3) {
+
+//                 let delBtn = document.createElement("button")
+//                 delBtn.addEventListener("click", removeData);
+//                 delBtn.innerText = "Delete";
+
+//                 tdTag.appendChild(delBtn);
+//             }
+
+//             trTag.appendChild(tdTag);
+
+//         }
+//         tableTag.appendChild(trTag);
+//     }
+
+// }
+
+// showData();
+
+
+// function removeData(event) {
+//     let indexOFElement = event.target.parentNode.parentNode.firstElementChild.textContent;
+//     indexOFElement--;
+
+
+//     studentsNames.splice(indexOFElement,1);
+//     studentsClass.splice(indexOFElement,1);
+
+//     let trTags = document.getElementsByTagName("tr");
+
+//     Array.from(trTags).forEach(function(item,index){
+//         if(index > 0){
+//             item.remove();
+//         }
+//     })
+
+//     showData();
+// }
+
+// Question Number 4
+// function changeImage(tag,imgSrc) {
+//     tag.src = imgSrc;
+// }
+
+// Question Number 5
+
+// let counter = 0;
+// let showCounter = document.getElementById("counter");
+
+// showCounter.innerText = counter;
+
+// function incraese(){
+//     showCounter.innerText = ++counter;
+// }
+
+// function decrease(){
+//     showCounter.innerText = --counter;
+
+// }
+
+
+/* Chapter 49 to 52 */
 
 // Question Number 1
 
+// // Initializations
+// let form = document.querySelector("form");
+// let name = document.getElementById("name");
+// let dateOfBirth = document.getElementById("date-of-birth");
+// let heading = document.querySelector("#show-data h2");
+
+// let showName = document.getElementById("show-name");
+// let showDateOfBirth = document.getElementById("show-date-of-birth");
+
+// // Add Events
+// form.addEventListener("submit",getData);
+
+// // Getting data
+// function getData(){
+//     heading.textContent = "Show Details";
+//     showName.textContent = "Name: "+name.value;    
+//     showDateOfBirth.textContent = "Date of Birth: "+dateOfBirth.value;    
+// }
+
 // Question Number 2
+// let string = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, nemo. Consequuntur iusto alias ipsam
+// cupiditate vero illo ut facere voluptatum, laboriosam asperiores. Corporis error ab rem fugiat commodi!
+// Molestias, provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laudantium natus
+// beatae, voluptatem tenetur aut cumque aperiam, voluptates facilis voluptate facere explicabo officiis iste in
+// eum inventore quidem sapiente aliquam?`;
+// let para = document.getElementById("para");
+// let btn = document.getElementById("see-more");
+// btn.addEventListener("click",seeMore);
+
+
+// function seeMore(event) {
+//     event.preventDefault();
+//     para.innerHTML = string;
+// }
 
 // Question Number 3
 
-// Question Number 4
+// Initialization
+// const userName = document.getElementById("name");
+// const userClass = document.getElementById("class");
+// let addBtn = document.getElementById("btn");
 
-// Question Number 5
+// // Adding Event Listener
+// addBtn.addEventListener("click", saveRecord);
+
+// // Functions
+// function saveRecord() {
+//     // creating Element
+//     let table = document.querySelector("table");
+//     let tr = document.createElement("tr");
+//     let td;
+//     let delBtn = document.createElement("button");
+//     delBtn.innerText = "Delete";
+
+//     // Adding Event Listener
+//     delBtn.addEventListener("click", removeRecord);
+
+//     // Creating td and inserting element in td
+//     for (let i = 0; i < 3; i++) {
+//         td = document.createElement("td");
+//         if (i === 0) {
+//             td.textContent = userName.value;
+
+//         }
+//         else if (i === 1) {
+//             td.textContent = userClass.value;
+//         }
+//         else if (i === 2) {
+//             td.appendChild(delBtn);
+//         }
+//         tr.appendChild(td);
+//     }
+//     table.appendChild(tr);
+
+//     userName.value = "";
+//     userClass.value = "";
+// }
+
+// function removeRecord(event) {
+//     event.target.parentNode.parentNode.remove()
+// }
+
+
+/* Chapter 52 to 57 */
+
+// Question Number 1
+// Initialization
+let mainDiv = document.querySelector("div.main");
+let img = null;
+let imgSrc = null;
+// Creating images and inserting it into main div
+for (let i = 0; i < 4; i++) {
+    
+    img = document.createElement("img");
+
+    // Adding Event Listener
+    img.addEventListener("click",modelImage);
+    if(i == 0){
+        imgSrc = "images/4.png";
+    }
+    else if(i == 1){
+        imgSrc = "images/5.jpg";
+    }
+    else if(i == 2){
+        imgSrc = "images/6.jpg";
+    }
+    else if(i == 3){
+        imgSrc = "images/7.png";
+    }
+    img.src = imgSrc;
+    mainDiv.appendChild(img);
+}
+
+function modelImage(){
+    
+
+}
+
